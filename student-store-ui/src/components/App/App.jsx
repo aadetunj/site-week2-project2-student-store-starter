@@ -6,10 +6,12 @@ import Navbar from "../Navbar/Navbar";
 import Home from "../Home/Home";
 import { useEffect, useState } from "react";
 import "./App.css";
+import Search from "../Search/Search";
 
 export default function App() {
   const url = "https://codepath-store-api.herokuapp.com/store";
   const [products, setProducts] = useState([]);
+  const [val, setval] = useState("");
   useEffect(() => {
     axios.get(url).then((response) => {
       // do stuff
@@ -27,13 +29,13 @@ export default function App() {
           {/* YOUR CODE HERE! */}
           <Navbar />
           {/* <Sidebar /> */}
-
+         
           <div className="hero">
             <div className="content">
               <div className="intro">
                 <h1 className="h1">Welcome!</h1>
                 <h2 className="h2">Find Your Merch!</h2>
-                <p>
+                <p id="hero-paragraph">
                   We have all kinds of goodies. Click on any of the items to
                   start filling up your shopping cart. Checkout whenever you're
                   ready.
@@ -48,8 +50,8 @@ export default function App() {
               </div>
             </div>
           </div>
-
-          <Home products={products} />
+          <Search searchQuery={val} valSetter={setval} />
+          <Home products={products} newVal = {val} />
         </main>
       </BrowserRouter>
     </div>

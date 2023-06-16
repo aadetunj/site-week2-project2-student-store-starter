@@ -1,23 +1,24 @@
 import * as React from "react";
 import "./Home.css";
+import { useState } from "react";
 
-export default function Home({ products }) {
+export default function Home({ products }, newVal) {
+  const [filterProducts, setFilterProducts] = useState(products);
+
   function createProduct(info) {
     return (
       <section className="product">
         <img id="product-image" src={info.image} />
         <p className="productsName">{info.name}</p>
-        <p className="productsPrice">
-          <br />${info.price}
-        </p>
+        <p className="productsPrice">${info.price}</p>
       </section>
     );
   }
 
   return (
     <div className="product-list">
-      {console.log(products)}
-      {/* {console.log("im inside a product")} */}
+      {/* {console.log(products)} */}
+
       {products?.map((product) => createProduct(product))}
     </div>
   );
