@@ -24,9 +24,7 @@ export default function App() {
       <BrowserRouter>
         <main>
           {/* YOUR CODE HERE! */}
-          <Navbar />
-          {/* <Sidebar /> */}
-
+          <Navbar/>
           <div className="hero">
             <div className="content">
               <div className="intro">
@@ -42,17 +40,13 @@ export default function App() {
                 <img
                   src="https://codepath-student-store-demo.surge.sh/assets/student_store_icon.18e5d61a.svg"
                   alt="hero-icon"
-                  id="hero-img"
-                ></img>
+                  id="hero-img"/>
               </div>
             </div>
           </div>
           <Routes>
             <Route path="/" element={<Home products={products} />} />
-            {/* <Route path="/" element={<About />} /> */}
           </Routes>
-
-          {/* <Home products={products} /> */}
         </main>
       </BrowserRouter>
     </div>

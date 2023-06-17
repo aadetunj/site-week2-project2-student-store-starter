@@ -3,6 +3,7 @@ import "./Home.css";
 import { useState } from "react";
 import Search from "../Search/Search";
 import SubNavbar from "../SubNavbar/SubNavbar";
+import { Link } from "react-router-dom";
 
 export default function Home({ products }) {
 
