@@ -1,9 +1,14 @@
 import * as React from "react";
 import "./Home.css";
 import { useState } from "react";
+import Search from "../Search/Search";
 
-export default function Home({ products }, newVal) {
-  const [filterProducts, setFilterProducts] = useState(products);
+export default function Home({ products }) {
+  const [value, setValue] = useState("");
+
+  const filterProducts = products?.filter((product) => {
+    return product.name.toLowerCase().includes(value.toLowerCase());
+  });
 
   function createProduct(info) {
     return (
@@ -16,11 +21,35 @@ export default function Home({ products }, newVal) {
   }
 
   return (
-    <div className="product-list">
-      {/* {console.log(products)} */}
+    <>
+      <div>
+        <Search value={value} setValue={setValue} />
 
-      {products?.map((product) => createProduct(product))}
-    </div>
+        <div className="categories">
+          <ul className="category-menu">
+            <li className="is-active">
+              <button className="cloth">All Categories</button>
+            </li>
+            <li>
+              <button className="cloth">Clothing</button>
+            </li>
+            <li>
+              <button className="cloth">Food</button>
+            </li>
+            <li>
+              <button className="cloth">Accessories</button>
+            </li>
+            <li>
+              <button className="cloth">Tech</button>
+            </li>
+          </ul>
+        </div>
+
+        <div className="product-list">
+          {filterProducts?.map((product) => createProduct(product))}
+        </div>
+      </div>
+    </>
   );
 }
 

@@ -2,16 +2,17 @@ import * as React from "react";
 import axios from "axios";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-// import Sidebar from "../Sidebar/Sidebar";
 import Home from "../Home/Home";
 import { useEffect, useState } from "react";
 import "./App.css";
-import Search from "../Search/Search";
 
 export default function App() {
   const url = "https://codepath-store-api.herokuapp.com/store";
+
   const [products, setProducts] = useState([]);
-  const [val, setval] = useState("");
+
+  // const [value, setValue] = useState("");
+
   useEffect(() => {
     axios.get(url).then((response) => {
       // do stuff
@@ -21,15 +22,11 @@ export default function App() {
   return (
     <div className="app">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/" element={<About />} /> */}
-        </Routes>
         <main>
           {/* YOUR CODE HERE! */}
           <Navbar />
           {/* <Sidebar /> */}
-         
+
           <div className="hero">
             <div className="content">
               <div className="intro">
@@ -50,8 +47,12 @@ export default function App() {
               </div>
             </div>
           </div>
-          <Search searchQuery={val} valSetter={setval} />
-          <Home products={products} newVal = {val} />
+          <Routes>
+            <Route path="/" element={<Home products={products} />} />
+            {/* <Route path="/" element={<About />} /> */}
+          </Routes>
+
+          {/* <Home products={products} /> */}
         </main>
       </BrowserRouter>
     </div>
