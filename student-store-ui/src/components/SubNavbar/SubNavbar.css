@@ -1,0 +1,23 @@
+
+.category-menu{
+
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style: none;
+    }
+    
+    .categories{
+    /* align-items: center; */
+    /* background-color: aqua; */
+    margin-left: 36%;
+    justify-content: space-between;
+    }
+    
+    
+    .cloth {
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    

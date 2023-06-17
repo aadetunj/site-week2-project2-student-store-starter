@@ -2,12 +2,16 @@ import * as React from "react";
 import "./Home.css";
 import { useState } from "react";
 import Search from "../Search/Search";
+import SubNavbar from "../SubNavbar/SubNavbar";
 
 export default function Home({ products }) {
-  const [value, setValue] = useState("");
 
+  const [value, setValue] = useState("");
+  const [category, setCategory] = useState("");
+
+  console.log(products)
   const filterProducts = products?.filter((product) => {
-    return product.name.toLowerCase().includes(value.toLowerCase());
+    return (product.name.toLowerCase().includes(value.toLowerCase()) && product.category.toLowerCase().includes(category.toLowerCase()));
   });
 
   function createProduct(info) {
@@ -25,25 +29,10 @@ export default function Home({ products }) {
       <div>
         <Search value={value} setValue={setValue} />
 
-        <div className="categories">
-          <ul className="category-menu">
-            <li className="is-active">
-              <button className="cloth">All Categories</button>
-            </li>
-            <li>
-              <button className="cloth">Clothing</button>
-            </li>
-            <li>
-              <button className="cloth">Food</button>
-            </li>
-            <li>
-              <button className="cloth">Accessories</button>
-            </li>
-            <li>
-              <button className="cloth">Tech</button>
-            </li>
-          </ul>
-        </div>
+       {/* add the subnabar here */}
+
+
+        <SubNavbar category={category} setCategory={setCategory}/>
 
         <div className="product-list">
           {filterProducts?.map((product) => createProduct(product))}
