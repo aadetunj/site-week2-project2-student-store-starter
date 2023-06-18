@@ -3,8 +3,11 @@ import axios from "axios";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Home from "../Home/Home";
+import Hero from "../Hero/Hero";
 import { useEffect, useState } from "react";
 import "./App.css";
+import ProductDetails from "../ProductDetails/ProductDetails";
+import Footer from "../Footer/Footer";
 
 export default function App() {
   const url = "https://codepath-store-api.herokuapp.com/store";
@@ -24,29 +27,13 @@ export default function App() {
       <BrowserRouter>
         <main>
           {/* YOUR CODE HERE! */}
-          <Navbar/>
-          <div className="hero">
-            <div className="content">
-              <div className="intro">
-                <h1 className="h1">Welcome!</h1>
-                <h2 className="h2">Find Your Merch!</h2>
-                <p id="hero-paragraph">
-                  We have all kinds of goodies. Click on any of the items to
-                  start filling up your shopping cart. Checkout whenever you're
-                  ready.
-                </p>
-              </div>
-              <div className="media">
-                <img
-                  src="https://codepath-student-store-demo.surge.sh/assets/student_store_icon.18e5d61a.svg"
-                  alt="hero-icon"
-                  id="hero-img"/>
-              </div>
-            </div>
-          </div>
+          <Navbar />
+
           <Routes>
             <Route path="/" element={<Home products={products} />} />
+            <Route path="products/:id" element={<ProductDetails />} />
           </Routes>
+        <Footer></Footer>
         </main>
       </BrowserRouter>
     </div>
