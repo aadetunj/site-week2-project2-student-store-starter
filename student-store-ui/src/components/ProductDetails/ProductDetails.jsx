@@ -5,7 +5,6 @@ import Navbar from "../Navbar/Navbar";
 
 export default function ProductDetails() {
   const { id } = useParams();
-  // console.log("heyyyyyyyyyy"+ id);
   const [product, setProduct] = useState();
 
   useEffect(() => {

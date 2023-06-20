@@ -1,0 +1,17 @@
+.contact {
+    width: 100%;
+    max-width: 100vw;
+    min-height: 350px;
+    margin: 40px 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+.contact{
+    background-color: azure;
+}

@@ -2,11 +2,11 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer class="footer">
-      <div class="content">
-        <div class="top">
-          <div class="links">
-            <div class="link-column">
+    <footer className="footer">
+      <div className="content">
+        <div className="top">
+          <div className="links">
+            <div className="link-column">
               <h4>Categories</h4>
               <ul>
                 <li>All Categories</li>
@@ -16,7 +16,7 @@ export default function Footer() {
                 <li>Tech</li>
               </ul>
             </div>
-            <div class="link-column">
+            <div className="link-column">
               <h4>Company</h4>
               <ul>
                 <li>About Us</li>
@@ -26,7 +26,7 @@ export default function Footer() {
                 <li>Careers</li>
               </ul>
             </div>
-            <div class="link-column">
+            <div className="link-column">
               <h4>Support</h4>
               <ul>
                 <li>Contact Us</li>
@@ -37,7 +37,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div class="link-column">
+            <div className="link-column">
               <h4>Account</h4>
               <ul>
                 <li>Login</li>
@@ -47,7 +47,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div class="link-column">
+            <div className="link-column">
               <h4>Socials</h4>
               <ul>
                 <li>Facebook</li>
@@ -58,35 +58,35 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div class="link-column">
+            <div className="link-column">
               <h4>Our App</h4>
 
               <ul>
                 <li>
-                  <img
+                  {/* <img
                     src="/assets/app_store.a7d8c549.svg"
                     alt="app store"
-                  ></img>
+                  ></img> */}
                 </li>
                 <li>
-                  <img
+                  {/* <img
                     src="/assets/google_play.27aab7c8.svg"
                     alt="google play store"
-                  ></img>
+                  ></img> */}
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="bottom">
-          <span class="payment-options">
-            <img
+        <div className="bottom">
+          <span className="payment-options">
+            {/* <img
               src="/assets/american_express.40f242c7.svg"
               alt="american express"
-            ></img>
-            <img src="/assets/mastercard.c75b7bc4.svg" alt="mastercard"></img>
+            ></img> */}
+            {/* <img src="/assets/mastercard.c75b7bc4.svg" alt="mastercard"></img>
             <img src="/assets/paypal.6a45b239.svg" alt="paypal"></img>
-            <img src="/assets/visa.a818ddc4.svg" alt="visa"></img>
+            <img src="/assets/visa.a818ddc4.svg" alt="visa"></img> */}
           </span>
         </div>
       </div>
