@@ -14,7 +14,7 @@ export default function SubNavbar({ setCategory }) {
     <div className="categories">
       <ul className="category-menu">
         <li className="is-active">
-          <button id={"1"} className="cloth" name={""} onClick={handleClick}>
+          <button id={"1"} className="cloth" name={""} onClick={handleClick} >
             All Categories
           </button>
         </li>

@@ -1,84 +1,19 @@
-/* .home {
-  width: 100%;
-  max-width: 100vw;
-  height: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-} */
-
-
-.product {
-      width: 270px;
-      /* height: 200px; */
-      display: flex;
-      flex-wrap:wrap;
-       /* margin-top: 15px;  */
-       background-color: transparent;
-       margin-bottom: 4%;
-       margin-left: 4%;
-       margin-right: 4%;
-       border: solid 2px rgb(227, 227, 227);
-       padding-left: 20px ;
-       flex-direction: column;
-      border-radius: 1rem;
-      justify-content: center;
-      /* padding-bottom: 10vh; */
-  
-}
-
-
-#product-image {
-  width: 225px;
-  height: auto;
-  object-fit:initial;
-  margin-top: 10px;
-  border-radius: 2%;
-}
-
-.product-list {
-    display: flex;
-      flex-wrap: wrap;
-      margin-top: 10px; 
-      flex-direction: row;
-      justify-content: space-around;
-      padding: 5vh;
-      /* padding-top: 2p; */
-      /* padding: 5vh; */     
-}
-
-
-.category-menu{
-
-display: flex;
-flex-direction: row;
-text-decoration: none;
-list-style: none;
-}
-
-.categories{
-/* align-items: center; */
-/* background-color: aqua; */
-margin-left: 36%;
-justify-content: space-between;
-
-}
-
-
-.cloth {
-
-margin-left: 10px;
-margin-right: 10px;
-
-
-
-}
-
-
-.link{
-  display:contents;
+.link {
+  display: contents;
   /* height: 30vh; */
   color: black;
   text-decoration: none;
+}
+
+.title-and-product-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.best-seller-title {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 300;
+  font-size: 2.5rem;
+  padding-left: 11vh;
 }

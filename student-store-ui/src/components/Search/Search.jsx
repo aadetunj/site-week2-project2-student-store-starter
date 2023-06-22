@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Search.css";
 
 function Search({ value, setValue }) {
@@ -8,12 +7,13 @@ function Search({ value, setValue }) {
   }
 
   return (
-    <form style={{ marginTop: "15vh", textAlign: "center" }}>
-      <input
+    <form style={{ marginTop: "15vh", textAlign: "center", justifyContent: "center" }}>
+      <input className="searchBar"
         placeholder="Search..."
         onChange={handleChange}
         type="input"
-        style={{ width: "50vh", padding: "10px", borderRadius: "0.25rem" }}/>
+        style={{ width: "80vh", padding: "10px", borderRadius: "0.5rem", height: "3rem"}}
+      />
     </form>
   );
 }

@@ -2,50 +2,45 @@
   scroll-behavior: smooth;
 }
 
-
 .navbar {
-    background-color: #333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* gap: rem; */
-    width: 100%;
-    min-width: 100%;
-    padding: 0 20rem;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: rem; */
+  width: 100%;
+  min-width: 100%;
+  padding: 0 20rem;
 
-    height: 5rem;
-    /* min-width: 100%; */
-    /* position: fixed; */
-  }
-  
-  .site-title{
-    font-size: 2rem; 
-    margin-left: -10rem;
-  }
-  
-  .navbar ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 10rem;
-    font-size: 1.25rem;
-  }
-  
-  .navbar a {
-    /* tf does inherit do?  */
-    color: inherit;
-    text-decoration: none;
-  }
-
-
- a {
-  transition: color 0.3s ease;
- }
-
-
-  a:hover {
-    color: rgb(222, 194, 16);
+  height: 5rem;
+  /* min-width: 100%; */
+  /* position: fixed; */
 }
- 
+
+.site-title {
+  font-size: 2rem;
+  margin-left: -10rem;
+}
+
+.navbar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 10rem;
+  font-size: 1.25rem;
+}
+
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: rgb(222, 194, 16);
+}

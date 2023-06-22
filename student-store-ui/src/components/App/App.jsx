@@ -9,9 +9,8 @@ import "./App.css";
 import ProductDetails from "../ProductDetails/ProductDetails";
 import Footer from "../Footer/Footer";
 
-
 export default function App() {
-  const url = "https://codepath-store-api.herokuapp.com/store";
+  const url = "http://localhost:3001/";
 
   const [products, setProducts] = useState([]);
 
@@ -28,15 +27,13 @@ export default function App() {
       <BrowserRouter>
         <main>
           {/* YOUR CODE HERE! */}
-          <Navbar />
-
           <Routes>
-            <Route path="/" element={<Home products={products} />} />
-            <Route path="products/:id" element={<ProductDetails />} />
+            <Route path="/" element={<Navbar />}>
+              <Route path="/" element={<Home products={products} />} />
+              <Route path="products/:id" element={<ProductDetails />} />
+            </Route>
           </Routes>
-        <Footer/>
-        
-
+          <Footer />
         </main>
       </BrowserRouter>
     </div>

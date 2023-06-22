@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../Navbar/Navbar";
+import "./ProductDetails.css";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -14,11 +15,23 @@ export default function ProductDetails() {
         setProduct(response.data.product);
       });
   }, []);
+
   console.log(product);
   return (
     <>
       <div className="product-detail" key={id}>
         <div className="product-container">
+          <div
+            className="product-name"
+            style={{
+              justifyContent: "center",
+              textAlign: "center",
+              paddingTop: "20px",
+              fontSize: "2rem",
+            }}
+          >
+            {product?.name}!
+          </div>
           <div
             className="product-image"
             style={{
@@ -30,14 +43,18 @@ export default function ProductDetails() {
             <img
               src={product?.image}
               alt={product?.name}
-              style={{ width: "50%", borderRadius: "10px" }}
+              style={{
+                width: "50%",
+                borderRadius: "10px",
+                maxWidth: "60vh",
+                maxHeight: "90vh",
+              }}
             />
           </div>
           <p style={{ display: "flex", justifyContent: "center" }}>
             {product?.description}
           </p>
           <div
-            className="backButton"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -45,7 +62,7 @@ export default function ProductDetails() {
             }}
           >
             <Link to={"/"}>
-              <button style={{ fontSize: "18px" }}>Back</button>
+              <button className="backButton">Back</button>
             </Link>
           </div>
         </div>
