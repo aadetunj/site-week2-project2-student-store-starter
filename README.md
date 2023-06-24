@@ -32,11 +32,11 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 
 ### Core Features
 
-- [ ] User can click to expand the shopping cart in the left navigation.
-- [ ] Users can click the '+' button on a product cart to increment that product in the shopping cart.
-- [ ] Users can click the '-' button on a product cart to decrement that product in the shopping cart. If the count is zero, the product should be removed from the cart.
-- [ ] The shopping cart displays a table of products, quantities, subtotal, tax, and total.
-- [ ] Users can checkout, and receive a receipt confirming their purchase.
+- [X] User can click to expand the shopping cart in the left navigation.
+- [X] Users can click the '+' button on a product cart to increment that product in the shopping cart.
+- [X] Users can click the '-' button on a product cart to decrement that product in the shopping cart. If the count is zero, the product should be removed from the cart.
+- [X] The shopping cart displays a table of products, quantities, subtotal, tax, and total.
+- [X] Users can checkout, and receive a receipt confirming their purchase.
 
 ### Stretch Features
 
@@ -45,6 +45,9 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 - [ ] Allow users to use an input to filter orders by the email of the person who placed the order.
 - [ ] Your choice! (Replace this bullet explaining what you implemented. Example: Users can create a wish list of products they are interested in but not yet ready to purchase.)
 
-My Video:
+My Video: Week 2
 
 https://www.loom.com/share/a028929893ff477f8be097b1cb197ec1?sid=6cf89e10-5534-454c-87ec-1b7564b482e1
+
+My Video: Week 3
+https://www.loom.com/share/80617d6089da4a9faa9e7105db007df1?sid=09de3003-fa39-4afa-8032-9ddb68ca6dbd
