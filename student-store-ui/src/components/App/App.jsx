@@ -13,8 +13,7 @@ export default function App() {
   const url = "http://localhost:3001/";
 
   const [products, setProducts] = useState([]);
-
-  // const [value, setValue] = useState("");
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     axios.get(url).then((response) => {
@@ -29,7 +28,12 @@ export default function App() {
           {/* YOUR CODE HERE! */}
           <Routes>
             <Route path="/" element={<Navbar />}>
-              <Route path="/" element={<Home products={products} />} />
+              <Route
+                path="/"
+                element={
+                  <Home products={products} cart={cart} setCart={setCart} />
+                }
+              />
               <Route path="products/:id" element={<ProductDetails />} />
             </Route>
           </Routes>
