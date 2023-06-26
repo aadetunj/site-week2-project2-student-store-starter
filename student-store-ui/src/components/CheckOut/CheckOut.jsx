@@ -2,7 +2,7 @@ import * as React from "react";
 import "./CheckOut.css";
 import { useState } from "react";
 
-export default function CheckOut({ product, cart, setCart }) {
+export default function CheckOut({ product, cart, setCart, name, email }) {
   const [checkOut, setCheckout] = useState(null);
   let subTotal = 0;
   const taxes = 0.0875;
@@ -34,6 +34,9 @@ export default function CheckOut({ product, cart, setCart }) {
       <ul>
         <h2>Check Out Info</h2>
         <h3>Receipt</h3>
+        <p>
+          Showing receipt for {name} available at {email}:
+        </p>
         {cart?.map((product, idx) => {
           {
             return (
@@ -46,9 +49,10 @@ export default function CheckOut({ product, cart, setCart }) {
             );
           }
         })}
-        &bull; Before taxes, the subtotal was ${subTotal.toFixed(2)}<br></br>
+        &bull; Before taxes, the subtotal was ${subTotal.toFixed(2)}
+        <br></br>
         &bull; After taxes and fees were applied, the total comes out to $
-        {(subTotal + newTotal).toFixed(2)}
+        {(subTotal + subTotal * taxes).toFixed(2)}
       </ul>
       <div className="centerbutt">
         <button className="checkOutbutton" onClick={toggleCheckOut}>

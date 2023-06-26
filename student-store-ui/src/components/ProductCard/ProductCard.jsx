@@ -74,7 +74,9 @@ export default function ProductCard({ product, cart, setCart }) {
           -
         </button>
       </div>
-      <div>{cart?.find((item) => item.id === product.id)?.quantity}</div>
+      <div className="currQuantTT">
+        {cart?.find((item) => item.id === product.id)?.quantity}
+      </div>{" "}
     </section>
   );
 }
