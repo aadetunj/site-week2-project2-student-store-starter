@@ -64,8 +64,10 @@
 }
 
 .table-title1 {
-  position: relative;
-  left: 0;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
 }
 
 .checkOutbutton {
@@ -73,6 +75,12 @@
   width: 10vh;
 }
 
-.cart-header{
+.cart-header {
   left: 0;
+}
+
+.namequantPrice,
+.cart-item {
+  justify-content: space-between;
+  display: flex;
 }

@@ -55,28 +55,54 @@ export default function Sidebar({ product, cart, setCart }) {
               </>
             ) : (
               <>
-                <p className="table-title">
-                  <b>Name</b> &nbsp;&nbsp;&nbsp;&nbsp; <b>Quantity</b>{" "}
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <b>Price</b>
-                </p>
-                <div className="cart-list">
+                {/* <div>
+                  <div style={{ display: "flex" }}>
+                    <div style={{ flex: 1 }}>Column 1</div>
+                    <div style={{ flex: 1 }}>Column 2</div>
+                    <div style={{ flex: 1 }}>Column 3</div>
+                  </div>
+                </div> */}
+                <div
+                  className="table-title"
+                  style={{
+                    width: "50%",
+                  }}
+                >
+                  <div className="namequantPrice">
+                    <div>
+                      <b>Name</b>
+                    </div>
+                    <div>
+                      <b>Quantity</b>
+                    </div>
+                    <div>
+                      <b>Price</b>
+                    </div>
+                  </div>
+                </div>
+                <div className="cart-list" style={{ display: "flex", width: "50%", }}>
                   {cart?.map((product, idx) => {
                     return (
-                      <div className="cart-item" key={idx}>
-                        {product.name} &nbsp;&nbsp;&nbsp;&nbsp;{" "}
-                        {product.quantity}x &nbsp;&nbsp;&nbsp;&nbsp;{" "}
-                        {product.price.toLocaleString("us-EN", {
-                          style: "currency",
-                          currency: "USD",
-                        })}
+                      <div
+                        className="cart-item"
+                        key={idx}
+                        style={{ flex: "1"}}
+                      >
+                        <div>{product.name}</div>
+                        <div>{product.quantity}</div>
+                        <div>
+                          {product.price.toLocaleString("us-EN", {
+                            style: "currency",
+                            currency: "USD",
+                          })}
+                        </div>
                       </div>
                     );
                   })}
                 </div>
 
                 <div className="table-title1">
-                  <b>Subtotal: </b>
+                  <b>Subtotal: </b> 
                   {"$"}
                   {subTotal.toFixed(2)}
                 </div>
