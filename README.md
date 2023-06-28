@@ -50,4 +50,4 @@ My Video: Week 2
 https://www.loom.com/share/a028929893ff477f8be097b1cb197ec1?sid=6cf89e10-5534-454c-87ec-1b7564b482e1
 
 My Video: Week 3
-https://www.loom.com/share/80617d6089da4a9faa9e7105db007df1?sid=09de3003-fa39-4afa-8032-9ddb68ca6dbd
+https://www.loom.com/share/15c470d33aee4560a09858e60c958b9c?sid=02d6296a-4bd6-4138-876d-89ca8e501edd
